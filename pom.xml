@@ -20,21 +20,20 @@
             <groupId>com.thoughtworks.gauge</groupId>
             <artifactId>gauge-java</artifactId>
             <version>${gauge.version}</version>
-            <scope>test</scope>
+
         </dependency>
         <!-- AssertJ for assertions -->
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>3.25.3</version>
-            <scope>test</scope>
+
         </dependency>
         <!-- Selenium Java bindings -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
-            <scope>test</scope>
         </dependency>
         <!-- WebDriverManager for automatic driver setup -->
         <dependency>
@@ -54,7 +53,7 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-support</artifactId>
             <version>${selenium.version}</version>
-            <scope>test</scope>
+
         </dependency>
     </dependencies>
 

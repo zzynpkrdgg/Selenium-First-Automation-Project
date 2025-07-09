@@ -14,7 +14,7 @@ import java.time.Duration;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StepImplementation extends Locators {
+public class StepImplementation {
 
     private WebDriver driver;
     private WebDriverWait wait;
@@ -32,11 +32,11 @@ public class StepImplementation extends Locators {
      * Tarayıcıyı belirtilen URL'ye yönlendirir.
      * @param url Yönlendirilecek URL.
      */
-    @Step("Kullanıcı <url> adresine gider.")
+   /** @Step("Kullanıcı <url> adresine gider.")
     public void navigateToUrl(String url) {
         driver.get(url);
         Gauge.writeMessage("Navigated to: " + url);
-    }
+    }**/
 
     /**
      * "First Name" alanına ilk adı girer.
