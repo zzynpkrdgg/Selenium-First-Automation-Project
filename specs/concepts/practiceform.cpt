@@ -1,18 +1,10 @@
 
 # Öğrenci Formu Spesifikasyonu
 
-  Project Name : DEMOQA-Practice-Form-Automation-Demo
-  Developer    : Zeynep Karadağ
-  Version      : 1.0.0
-  Date         :9/07/2025
-  Time         : 4.00 PM
-  Description  :
-
-
-# Kullanıcı URL adresine gider
+# Kullanıcı URL adresine gider<url>
 * Kullanıcı url adresine <url> gider.
 
-# Öğrenci kayıt formunu doldur
+# Öğrenci kayıt formunu doldur<firstName> <lastName> <email> <mobile> <dateOfBirth> <address>
 
 * Kullanıcı First Name alanına <firstName> yazar.
 * Kullanıcı Last Name alanına <lastName> yazar.
@@ -36,12 +28,12 @@
 # Formun başarıyla gönderildiğini doğrula
 * Kullanıcı formun başarıyla gönderildiğini görür.
 
-# Formun hata gösterdiğini doğrula
-* Kullanıcı formun hata mesajı gösterdiğini veya <field> alanının vurgulandığını görür.
-
-# Geçersiz email formatı hatasını doğrula
-* Kullanıcı Email formatı için hata mesajı görür.
-
-# Geçersiz mobil numara formatı hatasını doğrula
-* Kullanıcı Mobile alanında hata mesajı görür (<error_type> uyarısı).
+//# Formun hata gösterdiğini doğrula
+//* Kullanıcı formun hata mesajı gösterdiğini veya <field> alanının vurgulandığını görür.
+//
+//# Geçersiz email formatı hatasını doğrula
+//* Kullanıcı Email formatı için hata mesajı görür.
+//
+//# Geçersiz mobil numara formatı hatasını doğrula
+//* Kullanıcı Mobile alanında hata mesajı görür (<error_type> uyarısı).
 

@@ -26,14 +26,15 @@ public class PracticeForm {
 
     public WebDriver driver;
     public WebDriverWait wait;
-
+    public JavascriptExecutor js;
     public PracticeForm() {
         this.driver = Driver.driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.js = (JavascriptExecutor) driver;
     }
-// Add this to your PracticeForm.java or a more general Step Implementation class
 
-    @Step("Kullanıcı <url> adresine gider.")
+
+    @Step("Kullanıcı url adresine <url> gider.")
     public void navigateToUrl(String url) {
         driver.get(url);
         Gauge.writeMessage("Navigated to URL: " + url);
@@ -62,13 +63,26 @@ public class PracticeForm {
         Gauge.writeMessage("Entered Email: " + email);
     }
 
-    @Step("Kullanıcı Male gender butonunu seçer.")
-    public void selectMaleGender() {
-        WebElement maleRadio = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("GENDER_MALE_RADIO")).apply(driver));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", maleRadio);
-        Gauge.writeMessage("Selected Male gender");
+    @Step("Kullanıcı <gender> cinsiyet butonunu seçer.")
+    public void selectGender(String gender) {
+        WebElement genderRadio;
+        switch (gender.toLowerCase()) {
+            case "male":
+                genderRadio = wait.until(ExpectedConditions.elementToBeClickable(Locators.get("GENDER_MALE_RADIO")));
+                break;
+            case "female":
+                genderRadio = wait.until(ExpectedConditions.elementToBeClickable(Locators.get("GENDER_FEMALE_RADIO")));
+                break;
+            case "other":
+                genderRadio = wait.until(ExpectedConditions.elementToBeClickable(Locators.get("GENDER_OTHER_RADIO")));
+                break;
+            default:
+                throw new IllegalArgumentException("Geçersiz cinsiyet: " + gender);
+        }
+        js.executeScript("arguments[0].click();", genderRadio);
+        Gauge.writeMessage("Selected gender: " + gender);
     }
+
 
     @Step("Kullanıcı Mobile alanına <mobile> yazar.")
     public void enterMobile(String mobile) {
@@ -80,30 +94,55 @@ public class PracticeForm {
 
     @Step("Kullanıcı Date of Birth alanını <dateOfBirth> olarak seçer.")
     public void selectDateOfBirth(String dateOfBirth) {
-        WebElement dateField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("DATE_OF_BIRTH_INPUT")).apply(driver));
-        dateField.click();
+        WebElement dateField = wait.until(ExpectedConditions.elementToBeClickable(Locators.get("DATE_OF_BIRTH_INPUT")));
+        // date picker açmak için tıkla
+        js.executeScript("arguments[0].click();", dateField);
+        // Mevcut değeri temizle (CTRL+A + DELETE)
         dateField.sendKeys(Keys.chord(Keys.CONTROL, "a"));
         dateField.sendKeys(Keys.DELETE);
+        // Yeni tarihi yaz
         dateField.sendKeys(dateOfBirth);
+        // Enter tuşuna basarak date picker'ı kapat
         dateField.sendKeys(Keys.ENTER);
         Gauge.writeMessage("Selected Date of Birth: " + dateOfBirth);
     }
 
     @Step("Kullanıcı Subjects alanına <subject> yazar.")
     public void enterSubjects(String subject) {
-        WebElement subjectsField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("SUBJECTS_INPUT")).apply(driver));
+        WebElement subjectsField = wait.until(ExpectedConditions.elementToBeClickable(Locators.get("SUBJECTS_INPUT")));
         subjectsField.sendKeys(subject);
-        subjectsField.sendKeys(Keys.ENTER);
+        subjectsField.sendKeys(Keys.ENTER); // Seçimi onaylamak için ENTER'a bas
         Gauge.writeMessage("Entered Subject: " + subject);
     }
 
-    @Step("Kullanıcı Sports hobby checkbox'ını seçer.")
-    public void selectSportsHobby() {
-        WebElement sportsCheckbox = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("HOBBY_SPORTS_CHECKBOX")).apply(driver));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", sportsCheckbox);
-        Gauge.writeMessage("Selected Sports hobby");
+
+    @Step("Kullanıcı <hobbies> hobby checkbox'ını seçer.")
+    public void selectHobbies(String hobbies) {
+        String[] hobbyList = hobbies.split(",");
+        for (String hobby : hobbyList) {
+            hobby = hobby.trim(); // Boşlukları temizle
+            WebElement hobbyCheckbox;
+            switch (hobby.toLowerCase()) {
+                case "sports":
+                    hobbyCheckbox = wait.until(ExpectedConditions.elementToBeClickable(Locators.get("HOBBY_SPORTS_CHECKBOX")));
+                    break;
+                case "reading":
+                    hobbyCheckbox = wait.until(ExpectedConditions.elementToBeClickable(Locators.get("HOBBY_READING_CHECKBOX")));
+                    break;
+                case "music":
+                    hobbyCheckbox = wait.until(ExpectedConditions.elementToBeClickable(Locators.get("HOBBY_MUSIC_CHECKBOX")));
+                    break;
+                default:
+                    throw new IllegalArgumentException("Geçersiz hobi: " + hobby);
+            }
+            // Checkbox zaten seçiliyse tıklamayı atla
+            if (!hobbyCheckbox.isSelected()) {
+                js.executeScript("arguments[0].click();", hobbyCheckbox);
+            }
+            Gauge.writeMessage("Selected hobby: " + hobby);
+        }
     }
+
 
     @Step("Kullanıcı Current Address alanına <address> yazar.")
     public void enterCurrentAddress(String address) {
