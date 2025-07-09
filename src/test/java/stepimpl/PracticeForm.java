@@ -27,7 +27,7 @@ public class PracticeForm {
 
     @Step("Kullanıcı First Name alanına <firstName> yazar.")
     public void enterFirstName(String firstName) {
-        WebElement firstNameField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.FIRST_NAME_FIELD).apply(driver));
+        WebElement firstNameField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("FIRST_NAME_FIELD")).apply(driver));
         firstNameField.clear();
         firstNameField.sendKeys(firstName);
         Gauge.writeMessage("Entered First Name: " + firstName);
@@ -35,7 +35,7 @@ public class PracticeForm {
 
     @Step("Kullanıcı Last Name alanına <lastName> yazar.")
     public void enterLastName(String lastName) {
-        WebElement lastNameField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.LAST_NAME_FIELD).apply(driver));
+        WebElement lastNameField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("LAST_NAME_FIELD")).apply(driver));
         lastNameField.clear();
         lastNameField.sendKeys(lastName);
         Gauge.writeMessage("Entered Last Name: " + lastName);
@@ -43,7 +43,7 @@ public class PracticeForm {
 
     @Step("Kullanıcı Email alanına <email> yazar.")
     public void enterEmail(String email) {
-        WebElement emailField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.EMAIL_FIELD).apply(driver));
+        WebElement emailField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("EMAIL_FIELD")).apply(driver));
         emailField.clear();
         emailField.sendKeys(email);
         Gauge.writeMessage("Entered Email: " + email);
@@ -51,7 +51,7 @@ public class PracticeForm {
 
     @Step("Kullanıcı Male gender butonunu seçer.")
     public void selectMaleGender() {
-        WebElement maleRadio = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.GENDER_MALE_RADIO).apply(driver));
+        WebElement maleRadio = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("GENDER_MALE_RADIO")).apply(driver));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", maleRadio);
         Gauge.writeMessage("Selected Male gender");
@@ -59,7 +59,7 @@ public class PracticeForm {
 
     @Step("Kullanıcı Mobile alanına <mobile> yazar.")
     public void enterMobile(String mobile) {
-        WebElement mobileField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.MOBILE_FIELD).apply(driver));
+        WebElement mobileField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("MOBILE_FIELD")).apply(driver));
         mobileField.clear();
         mobileField.sendKeys(mobile);
         Gauge.writeMessage("Entered Mobile: " + mobile);
@@ -67,7 +67,7 @@ public class PracticeForm {
 
     @Step("Kullanıcı Date of Birth alanını <dateOfBirth> olarak seçer.")
     public void selectDateOfBirth(String dateOfBirth) {
-        WebElement dateField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.DATE_OF_BIRTH_INPUT).apply(driver));
+        WebElement dateField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("DATE_OF_BIRTH_INPUT")).apply(driver));
         dateField.click();
         dateField.sendKeys(Keys.chord(Keys.CONTROL, "a"));
         dateField.sendKeys(Keys.DELETE);
@@ -78,7 +78,7 @@ public class PracticeForm {
 
     @Step("Kullanıcı Subjects alanına <subject> yazar.")
     public void enterSubjects(String subject) {
-        WebElement subjectsField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.SUBJECTS_INPUT).apply(driver));
+        WebElement subjectsField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("SUBJECTS_INPUT")).apply(driver));
         subjectsField.sendKeys(subject);
         subjectsField.sendKeys(Keys.ENTER);
         Gauge.writeMessage("Entered Subject: " + subject);
@@ -86,7 +86,7 @@ public class PracticeForm {
 
     @Step("Kullanıcı Sports hobby checkbox'ını seçer.")
     public void selectSportsHobby() {
-        WebElement sportsCheckbox = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.HOBBY_SPORTS_CHECKBOX).apply(driver));
+        WebElement sportsCheckbox = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("HOBBY_SPORTS_CHECKBOX")).apply(driver));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", sportsCheckbox);
         Gauge.writeMessage("Selected Sports hobby");
@@ -94,7 +94,7 @@ public class PracticeForm {
 
     @Step("Kullanıcı Current Address alanına <address> yazar.")
     public void enterCurrentAddress(String address) {
-        WebElement addressField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.CURRENT_ADDRESS_FIELD).apply(driver));
+        WebElement addressField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("CURRENT_ADDRESS_FIELD")).apply(driver));
         addressField.clear();
         addressField.sendKeys(address);
         Gauge.writeMessage("Entered Current Address: " + address);
@@ -102,7 +102,7 @@ public class PracticeForm {
 
     @Step("Kullanıcı Submit butonuna tıklar.")
     public void clickSubmitButton() {
-        WebElement submitButton = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.SUBMIT_BUTTON).apply(driver));
+        WebElement submitButton = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("SUBMIT_BUTTON")).apply(driver));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", submitButton);
         Gauge.writeMessage("Clicked Submit button");
@@ -110,7 +110,7 @@ public class PracticeForm {
 
     @Step("Kullanıcı formun başarıyla gönderildiğini görür.")
     public void verifyFormSubmission() {
-        WebElement successMessage = wait.until(driver -> ExpectedConditions.visibilityOfElementLocated(Locators.SUBMISSION_SUCCESS_TITLE).apply(driver));
+        WebElement successMessage = wait.until(driver -> ExpectedConditions.visibilityOfElementLocated(Locators.get("SUBMISSION_SUCCESS_TITLE")).apply(driver));
         assertThat(successMessage.getText()).contains("Thanks for submitting the form");
         Gauge.writeMessage("Form submitted successfully");
     }

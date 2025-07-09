@@ -1,0 +1,18 @@
+{
+  "FIRST_NAME_FIELD": { "type": "id", "value": "firstName" },
+  "LAST_NAME_FIELD": { "type": "id", "value": "lastName" },
+  "EMAIL_FIELD": { "type": "id", "value": "userEmail" },
+  "MOBILE_FIELD": { "type": "id", "value": "userNumber" },
+  "SUBJECTS_INPUT": { "type": "id", "value": "subjectsInput" },
+  "CURRENT_ADDRESS_FIELD": { "type": "id", "value": "currentAddress" },
+  "GENDER_MALE_RADIO": { "type": "xpath", "value": "//input[@name='gender' and @value='Male']" },
+  "GENDER_FEMALE_RADIO": { "type": "xpath", "value": "//input[@name='gender' and @value='Female']" },
+  "GENDER_OTHER_RADIO": { "type": "xpath", "value": "//input[@name='gender' and @value='Other']" },
+  "DATE_OF_BIRTH_INPUT": { "type": "id", "value": "dateOfBirthInput" },
+  "HOBBY_SPORTS_CHECKBOX": { "type": "xpath", "value": "//label[contains(text(),'Sports')]" },
+  "HOBBY_READING_CHECKBOX": { "type": "xpath", "value": "//label[contains(text(),'Reading')]" },
+  "HOBBY_MUSIC_CHECKBOX": { "type": "xpath", "value": "//label[contains(text(),'Music')]" },
+  "SUBMIT_BUTTON": { "type": "id", "value": "submit" },
+  "SUBMISSION_SUCCESS_TITLE": { "type": "id", "value": "example-modal-sizes-title-lg" },
+  "SUBMISSION_TABLE_ROWS": { "type": "xpath", "value": "//div[@class='table-responsive']//td[2]" }
+} 
