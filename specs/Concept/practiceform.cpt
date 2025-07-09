@@ -1,14 +1,51 @@
+================================
+
+ * Project Name : DEMOQA-Practice-Form-Automation-Demo
+ * Developer    : Zeynep Karadağ
+ * Version      : 1.0.0
+ * Date         :9/07/2025
+ * Time         : 4.00 PM
+ * Description  :
+ ===============================
+
+# Kullanıcı URL adresine gider
+* Kullanıcı url adresine <url> gider.
 
 # Öğrenci kayıt formunu doldur
 
 * Kullanıcı First Name alanına <firstName> yazar.
 * Kullanıcı Last Name alanına <lastName> yazar.
 * Kullanıcı Email alanına <email> yazar.
-* Kullanıcı Male gender butonunu seçer.
 * Kullanıcı Mobile alanına <mobile> yazar.
 * Kullanıcı Date of Birth alanını <dateOfBirth> olarak seçer.
-* Kullanıcı Subjects alanına <subject> yazar.
-* Kullanıcı Sports hobby checkbox'ını seçer.
 * Kullanıcı Current Address alanına <address> yazar.
+
+# Cinsiyet seçimi <gender>
+* Kullanıcı <gender> cinsiyet butonunu seçer.
+
+# Hobi seçimi <hobbies>
+* Kullanıcı <hobbies> hobby checkbox'ını seçer.
+
+# Konu girişi <subject>
+* Kullanıcı Subjects alanına <subject> yazar.
+
+# Formu gönder
 * Kullanıcı Submit butonuna tıklar.
+
+# Formun başarıyla gönderildiğini doğrula
 * Kullanıcı formun başarıyla gönderildiğini görür.
+
+# Formun hata gösterdiğini doğrula
+* Kullanıcı formun hata mesajı gösterdiğini veya <field> alanının vurgulandığını görür.
+
+# Geçersiz email formatı hatasını doğrula
+* Kullanıcı Email formatı için hata mesajı görür.
+
+# Geçersiz mobil numara formatı hatasını doğrula
+* Kullanıcı Mobile alanında hata mesajı görür (<error_type> uyarısı).
+
+# Formu temizleme işlevini kullan
+* Kullanıcı "Clear" veya "Reset" düğmesine tıklar.
+
+# Doldurulan alanların boşaldığını doğrula
+* Kullanıcı doldurulan alanların boşaldığını görür.

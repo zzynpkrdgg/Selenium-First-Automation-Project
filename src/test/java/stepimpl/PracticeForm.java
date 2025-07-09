@@ -12,7 +12,14 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import java.time.Duration;
 
-
+/**
+ * Project Name : DEMOQA-Practice-Form-Automation-Demo
+ * Developer    : Zeynep Karadağ
+ * Version      : 1.0.0
+ * Date         :9/07/2025
+ * Time         : 4.00 PM
+ * Description  :
+ **/
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PracticeForm {
@@ -24,7 +31,13 @@ public class PracticeForm {
         this.driver = Driver.driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
+// Add this to your PracticeForm.java or a more general Step Implementation class
 
+    @Step("Kullanıcı <url> adresine gider.")
+    public void navigateToUrl(String url) {
+        driver.get(url);
+        Gauge.writeMessage("Navigated to URL: " + url);
+    }
     @Step("Kullanıcı First Name alanına <firstName> yazar.")
     public void enterFirstName(String firstName) {
         WebElement firstNameField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("FIRST_NAME_FIELD")).apply(driver));
