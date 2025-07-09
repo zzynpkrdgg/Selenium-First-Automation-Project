@@ -6,7 +6,17 @@ import org.openqa.selenium.WebDriver;
 
 public class Driver {
 
-    {
+    public static WebDriver driver;
+
+    @BeforeSuite
+    public void initializeDriver() {
+        driver = DriverFactory.getDriver();
     }
 
+    @AfterSuite
+    public void closeDriver() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 }

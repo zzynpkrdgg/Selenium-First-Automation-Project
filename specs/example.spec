@@ -7,9 +7,15 @@ To execute this specification, use `mvn test`
 
 Practice Form Feature
 ---------------------
-* Kullanıcı uygulama ana sayfasında "Practice Form" butonuna tıklar.
-* Kullanıcı "Name" alanına "Ali" yazar.
-* Kullanıcı "Surname" alanına "Veli" yazar.
+
+* Kullanıcı "First Name" alanına "Ali" yazar.
+* Kullanıcı "Last Name" alanına "Veli" yazar.
 * Kullanıcı "Email" alanına "ali.veli@example.com" yazar.
+* Kullanıcı "Male" gender butonunu seçer.
+* Kullanıcı "Mobile" alanına "5551234567" yazar.
+* Kullanıcı "Date of Birth" alanını "15 May 1990" olarak seçer.
+* Kullanıcı "Subjects" alanına "Computer Science" yazar.
+* Kullanıcı "Sports" hobby checkbox'ını seçer.
+* Kullanıcı "Current Address" alanına "Test Address, Test City" yazar.
 * Kullanıcı "Submit" butonuna tıklar.
 * Kullanıcı formun başarıyla gönderildiğini görür.
