@@ -7,10 +7,7 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Bu sınıf, otomasyon testlerinde kullanılan tüm WebDriver lokasyonlarını JSON dosyasından yükler.
- * Lokasyonlar için ayrı bir JSON dosyası kullanmak, bakımı ve okunabilirliği artırır.
- */
+
 public class Locators {
     private static final String LOCATORS_FILE = "/locator/locators.json";
     private static Map<String, By> locatorMap = new HashMap<>();

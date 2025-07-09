@@ -7,6 +7,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import com.thoughtworks.gauge.Gauge;
+/**
+ * Project Name : DEMOQA-Practice-Form-Automation-Demo
+ * Developer    : Zeynep Karadağ
+ * Version      : 1.0.0
+ * Date         :9/07/2025
+ * Time         : 4.00 PM
+ * Description  :
+ **/
 public class Driver {
 
     public static WebDriver driver;

@@ -1,13 +1,14 @@
 
-/**
- * Project Name : DEMOQA-Practice-Form-Automation-Demo
- * Developer    : Zeynep Karadağ
- * Version      : 1.0.0
- * Date         :9/07/2025
- * Time         : 4.00 PM
- * Description  :
- **/
+
 # Öğrenci Formu Spesifikasyonu
+
+  Project Name : DEMOQA-Practice-Form-Automation-Demo
+  Developer    : Zeynep Karadağ
+  Version      : 1.0.0
+  Date         :9/07/2025
+  Time         : 4.00 PM
+  Description  :
+
 ## Tüm Alanları Geçerli Verilerle Doldurma
 
 * Kullanıcı URL adresine "https://demoqa.com/automation-practice-form" gider.

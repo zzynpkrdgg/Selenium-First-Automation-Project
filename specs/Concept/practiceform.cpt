@@ -1,12 +1,13 @@
-================================
 
- * Project Name : DEMOQA-Practice-Form-Automation-Demo
- * Developer    : Zeynep Karadağ
- * Version      : 1.0.0
- * Date         :9/07/2025
- * Time         : 4.00 PM
- * Description  :
- ===============================
+# Öğrenci Formu Spesifikasyonu
+
+  Project Name : DEMOQA-Practice-Form-Automation-Demo
+  Developer    : Zeynep Karadağ
+  Version      : 1.0.0
+  Date         :9/07/2025
+  Time         : 4.00 PM
+  Description  :
+
 
 # Kullanıcı URL adresine gider
 * Kullanıcı url adresine <url> gider.
@@ -44,8 +45,3 @@
 # Geçersiz mobil numara formatı hatasını doğrula
 * Kullanıcı Mobile alanında hata mesajı görür (<error_type> uyarısı).
 
-# Formu temizleme işlevini kullan
-* Kullanıcı "Clear" veya "Reset" düğmesine tıklar.
-
-# Doldurulan alanların boşaldığını doğrula
-* Kullanıcı doldurulan alanların boşaldığını görür.
