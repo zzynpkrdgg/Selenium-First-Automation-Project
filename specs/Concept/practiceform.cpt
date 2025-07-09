@@ -2,7 +2,7 @@ Created by Acer on 9.07.2025
 ==========================
 
 
-## Öğrenci kayıt formunu doldur
+# Öğrenci kayıt formunu doldur
 
 * Kullanıcı "First Name" alanına <firstName> yazar.
 * Kullanıcı "Last Name" alanına <lastName> yazar.
@@ -15,6 +15,6 @@ Created by Acer on 9.07.2025
 * Kullanıcı "Current Address" alanına <address> yazar.
 
 
-## Formu gönderir ve başarıyla gönderildiğini doğrular
+# Formu gönderir ve başarıyla gönderildiğini doğrular
 * Kullanıcı "Submit" butonuna tıklar.
 * Kullanıcı formun başarıyla gönderildiğini görür.
