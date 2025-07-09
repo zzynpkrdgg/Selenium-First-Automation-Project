@@ -1,7 +1,8 @@
-package org.example;
+package stepimpl;
 
 import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Step;
+import driver.Driver;
 import locator.Locators;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,18 +15,19 @@ import java.time.Duration;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StepImplementation {
+public class PracticeForm {
 
-    private WebDriver driver;
-    private WebDriverWait wait;
+
+    public WebDriver driver;
+    public WebDriverWait wait;
 
     /**
      * StepImplementation için yapıcı metot.
      * WebDriver ve WebDriverWait örneklerini Driver sınıfındaki statik sürücüyü kullanarak başlatır.
      */
-    public StepImplementation() {
+    public PracticeForm() {
         this.driver = Driver.driver; // Driver sınıfındaki WebDriver örneğini al
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // 10 saniye zaman aşımı ile WebDriverWait'ı başlat
+        this.wait = new WebDriverWait(Driver.driver, Duration.ofSeconds(10)); // 10 saniye zaman aşımı ile WebDriverWait'ı başlat
     }
 
     /**
