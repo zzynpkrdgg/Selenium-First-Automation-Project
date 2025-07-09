@@ -1,4 +1,4 @@
-/**public class Main {
+public class Main {
     static void myMethod(String fname) {
         System.out.println(fname + " Refsnes");
     }
@@ -8,4 +8,4 @@
         myMethod("Jenny");
         myMethod("Anja");
     }
-}**/
+ }

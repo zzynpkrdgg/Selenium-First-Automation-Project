@@ -2,19 +2,19 @@ Created by Acer on 9.07.2025
 ==========================
 
 
-# Öğrenci kayıt formunu doldur
+## Öğrenci kayıt formunu doldur
 
-* Kullanıcı "First Name" alanına <firstName> yazar.
-* Kullanıcı "Last Name" alanına <lastName> yazar.
-* Kullanıcı "Email" alanına <email> yazar.
-* Kullanıcı "Male" gender butonunu seçer.
-* Kullanıcı "Mobile" alanına <mobile> yazar.
-* Kullanıcı "Date of Birth" alanını <dateOfBirth> olarak seçer.
-* Kullanıcı "Subjects" alanına <subject> yazar.
-* Kullanıcı "Sports" hobby checkbox'ını seçer.
-* Kullanıcı "Current Address" alanına <address> yazar.
+* Kullanıcı First Name alanına <firstName> yazar.
+* Kullanıcı Last Name alanına <lastName> yazar.
+* Kullanıcı Email alanına <email> yazar.
+* Kullanıcı Male gender butonunu seçer.
+* Kullanıcı Mobile alanına <mobile> yazar.
+* Kullanıcı Date of Birth alanını <dateOfBirth> olarak seçer.
+* Kullanıcı Subjects alanına <subject> yazar.
+* Kullanıcı Sports hobby checkbox'ını seçer.
+* Kullanıcı Current Address alanına <address> yazar.
 
 
-# Formu gönderir ve başarıyla gönderildiğini doğrular
-* Kullanıcı "Submit" butonuna tıklar.
+## Formu gönderir ve başarıyla gönderildiğini doğrular
+* Kullanıcı Submit butonuna tıklar.
 * Kullanıcı formun başarıyla gönderildiğini görür.
