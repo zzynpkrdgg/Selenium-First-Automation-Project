@@ -52,7 +52,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-support</artifactId>
-            <version>${selenium.version}</version>
+            <version>4.x</version>
 
         </dependency>
     </dependencies>
