@@ -1,0 +1,21 @@
+{
+  "Data_url": "https://demoqa.com/automation-practice-form",
+  "Data_firstname": "zeynep",
+  "Data_lastname": "krdg",
+  "Data_email1": "xyz@gmail.com",
+  "Data_invalid_email": "xyz@",
+  "Data_gender1": "female",
+  "Data_gender2": "male",
+  "Data_gender3": "other",
+  "Data_mobile1": "5535492360",
+  "Data_invalid_mobile1": "555",
+  "Data_invalid_mobile2": "5abc234567",
+  "Data_dateOfBirth1": "23.11.2004",
+  "Data_dateOfBirth2": "15.05.2026",
+  "Data_dateOfBirth3": "16.07.2025",
+  "Data_address": "emek mah.",
+  "Data_hobbies1": "sports",
+  "Data_hobbies2": "reading",
+  "Data_hobbies3": "music",
+  "Data_hobbies_all": "sports,reading,music"
+}

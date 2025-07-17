@@ -12,14 +12,14 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import java.time.Duration;
 
-/**
- * Project Name : DEMOQA-Practice-Form-Automation-Demo
- * Developer    : Zeynep Karadağ
- * Version      : 1.0.0
- * Date         :9/07/2025
- * Time         : 4.00 PM
- * Description  :
- **/
+
+//* Project Name : DEMOQA-Practice-Form-Automation-Demo
+//* Developer    : Zeynep Karadağ
+//* Version      : 1.0.0
+//* Date         :9/07/2025
+//* Time         : 4.00 PM
+//* Description  :
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PracticeForm {
@@ -28,42 +28,44 @@ public class PracticeForm {
     public WebDriverWait wait;
     public JavascriptExecutor js;
     public PracticeForm() {
-        this.driver = Driver.driver;
+        this.driver = Driver.webDriver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         this.js = (JavascriptExecutor) driver;
     }
 
 
-    @Step("Kullanıcı url adresine <url> gider.")
-    public void navigateToUrl(String url) {
-        driver.get(url);
-        Gauge.writeMessage("Navigated to URL: " + url);
+    @Step("url adresine <text> git")
+    public void navigateToUrl(String text) {
+        driver.get(text);
+        Gauge.writeMessage("Navigated to URL: " + text);
     }
-    @Step("Kullanıcı First Name alanına <firstName> yazar.")
-    public void enterFirstName(String firstName) {
+    @Step("First Name alanına <text> yaz")
+    public void enterFirstName(String text) {
         WebElement firstNameField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("FIRST_NAME_FIELD")).apply(driver));
         firstNameField.clear();
-        firstNameField.sendKeys(firstName);
-        Gauge.writeMessage("Entered First Name: " + firstName);
+        firstNameField.sendKeys(text);
+        Gauge.writeMessage("Entered First Name: " + text);
     }
 
-    @Step("Kullanıcı Last Name alanına <lastName> yazar.")
-    public void enterLastName(String lastName) {
+
+
+    @Step("Last Name alanına <text> yaz")
+    public void enterLastName(String text) {
         WebElement lastNameField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("LAST_NAME_FIELD")).apply(driver));
         lastNameField.clear();
-        lastNameField.sendKeys(lastName);
-        Gauge.writeMessage("Entered Last Name: " + lastName);
+        lastNameField.sendKeys(text);
+        Gauge.writeMessage("Entered Last Name: " + text);
     }
 
-    @Step("Kullanıcı Email alanına <email> yazar.")
-    public void enterEmail(String email) {
+    @Step("Email alanına <text> yaz")
+    public void enterEmail(String text) {
         WebElement emailField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("EMAIL_FIELD")).apply(driver));
         emailField.clear();
-        emailField.sendKeys(email);
-        Gauge.writeMessage("Entered Email: " + email);
+        emailField.sendKeys(text);
+        Gauge.writeMessage("Entered Email: " + text);
     }
 
-    @Step("Kullanıcı <gender> cinsiyet butonunu seçer.")
+    @Step("<gender> cinsiyet butonunu seç")
     public void selectGender(String gender) {
         WebElement genderRadio;
         switch (gender.toLowerCase()) {
@@ -84,15 +86,15 @@ public class PracticeForm {
     }
 
 
-    @Step("Kullanıcı Mobile alanına <mobile> yazar.")
-    public void enterMobile(String mobile) {
+    @Step("Mobile alanına <text> yaz")
+    public void enterMobile(String text) {
         WebElement mobileField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("MOBILE_FIELD")).apply(driver));
         mobileField.clear();
-        mobileField.sendKeys(mobile);
-        Gauge.writeMessage("Entered Mobile: " + mobile);
+        mobileField.sendKeys(text);
+        Gauge.writeMessage("Entered Mobile: " + text);
     }
 
-    @Step("Kullanıcı Date of Birth alanını <dateOfBirth> olarak seçer.")
+    @Step("Date of Birth alanını <Data_dateOfBirth1> olarak seç")
     public void selectDateOfBirth(String dateOfBirth) {
         WebElement dateField = wait.until(ExpectedConditions.elementToBeClickable(Locators.get("DATE_OF_BIRTH_INPUT")));
         // date picker açmak için tıkla
@@ -107,16 +109,16 @@ public class PracticeForm {
         Gauge.writeMessage("Selected Date of Birth: " + dateOfBirth);
     }
 
-    @Step("Kullanıcı Subjects alanına <subject> yazar.")
-    public void enterSubjects(String subject) {
+    @Step("Subjects alanına <text> yaz")
+    public void enterSubjects(String text) {
         WebElement subjectsField = wait.until(ExpectedConditions.elementToBeClickable(Locators.get("SUBJECTS_INPUT")));
-        subjectsField.sendKeys(subject);
+        subjectsField.sendKeys(text);
         subjectsField.sendKeys(Keys.ENTER); // Seçimi onaylamak için ENTER'a bas
-        Gauge.writeMessage("Entered Subject: " + subject);
+        Gauge.writeMessage("Entered Subject: " + text);
     }
 
 
-    @Step("Kullanıcı <hobbies> hobby checkbox'ını seçer.")
+    @Step("<hobbies> hobby checkbox'ını seç")
     public void selectHobbies(String hobbies) {
         String[] hobbyList = hobbies.split(",");
         for (String hobby : hobbyList) {
@@ -144,15 +146,15 @@ public class PracticeForm {
     }
 
 
-    @Step("Kullanıcı Current Address alanına <address> yazar.")
-    public void enterCurrentAddress(String address) {
+    @Step("Current Address alanına <text> yaz")
+    public void enterCurrentAddress(String text) {
         WebElement addressField = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("CURRENT_ADDRESS_FIELD")).apply(driver));
         addressField.clear();
-        addressField.sendKeys(address);
-        Gauge.writeMessage("Entered Current Address: " + address);
+        addressField.sendKeys(text);
+        Gauge.writeMessage("Entered Current Address: " + text);
     }
 
-    @Step("Kullanıcı Submit butonuna tıklar.")
+    @Step("Submit butonuna tıkla")
     public void clickSubmitButton() {
         WebElement submitButton = wait.until(driver -> ExpectedConditions.elementToBeClickable(Locators.get("SUBMIT_BUTTON")).apply(driver));
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -160,7 +162,7 @@ public class PracticeForm {
         Gauge.writeMessage("Clicked Submit button");
     }
 
-    @Step("Kullanıcı formun başarıyla gönderildiğini görür.")
+    @Step("formun başarıyla gönderildiğini gör")
     public void verifyFormSubmission() {
         WebElement successMessage = wait.until(driver -> ExpectedConditions.visibilityOfElementLocated(Locators.get("SUBMISSION_SUCCESS_TITLE")).apply(driver));
         assertThat(successMessage.getText()).contains("Thanks for submitting the form");

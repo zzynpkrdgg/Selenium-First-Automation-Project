@@ -1,0 +1,41 @@
+
+
+
+
+# Öğrenci kayıt formununu <text> url bağlantısı ile açar.
+* url adresine <text> git
+
+# Kullanıcı First Name alanına <text> yazar.
+* First Name alanına <text> yaz
+
+# Kullanıcı Last Name alanına <text> yazar.
+* Last Name alanına <text> yaz
+
+# Kullanıcı Email alanına <text> yazar.
+* Email alanına <text> yaz
+
+# Kullanıcı <Data_gender1> cinsiyet butonunu seçer.
+* <Data_gender1> cinsiyet butonunu seç
+
+# Kullanıcı Mobile alanına <text> yazar.
+* Mobile alanına <text> yaz
+
+# Kullanıcı Date of Birth alanını <Data_dateOfBirth1> olarak seçer.
+* Date of Birth alanını <Data_dateOfBirth1> olarak seç
+
+# Kullanıcı Subjects alanına <text> yazar.
+* Subjects alanına <text> yaz
+
+# Kullanıcı <hobbies> hobby checkbox'ını seçer.
+* <hobbies> hobby checkbox'ını seç
+
+# Kullanıcı Current Address alanına <text> yazar.
+* Current Address alanına <text> yaz
+
+
+# Formu gönderir.
+* Submit butonuna tıkla
+
+# Formun başarıyla gönderildiği doğrulanır.
+* formun başarıyla gönderildiğini gör
+
